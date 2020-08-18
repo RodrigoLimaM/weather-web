@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta charset="ISO-8859-1">
-        <title>Livro de Java, Android, iPhone, Ruby, PHP e muito mais - Casa do Código</title>
+        <title>Weather WEB</title>
         <c:url value="/resources/css" var="cssPath" />
         <link rel="stylesheet" href="${cssPath }/bootstrap.min.css" />
         <link rel="stylesheet" href="${cssPath }/bootstrap-theme.min.css" />
@@ -31,6 +31,28 @@
                 </div>
                 <button type="submit" class="btn btn-primary">Ver temperatura</button>
             </form:form>
+
+            <c:if test="${weather != null}">
+                <br>
+                <h1><center>Agora: ${weather.currentTemperature} graus - ${weather.description}</center></h1>
+                <br>
+                <table class="table table-bordered table-striped table-hover">
+                    <tr>
+                        <th>Data</th>
+                        <th>Maxima</th>
+                        <th>Minima</th>
+                        <th>Descricao</th>
+                    </tr>
+                    <c:forEach items="${weather.weatherForecast }" var="forecast">
+                        <tr>
+                            <td>${forecast.date }</td>
+                            <td>${forecast.max }</td>
+                            <td>${forecast.min }</td>
+                            <td>${forecast.description }</td>
+                        </tr>
+                    </c:forEach>
+                </table>
+            </c:if>
         </div>
     </body>
 </html>

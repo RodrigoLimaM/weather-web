@@ -20,7 +20,7 @@ public class WeatherController {
 
     @GetMapping("/weather")
     public ModelAndView getWeather(WeatherRequest weatherRequest) {
-        return new ModelAndView("weather")
+        return new ModelAndView("home")
                 .addObject("weather",
                         weatherService.getWeather(weatherRequest.getCity(),
                                 weatherRequest.getType()));
