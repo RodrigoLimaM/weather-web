@@ -13,15 +13,23 @@
         <c:url value="/resources/css" var="cssPath" />
         <link rel="stylesheet" href="${cssPath }/bootstrap.min.css" />
         <link rel="stylesheet" href="${cssPath }/bootstrap-theme.min.css" />
+
+        <style type="text/css">
+            body {
+                padding: 2% 0%;
+            }
+        </style>
+
     </head>
     <body>
+
         <div class="container">
             <form:form action="${s:mvcUrl('WC#getWeather').build() }" method="GET"
                 modelAttribute="weatherRequest" enctype="multipart/form-data">
                 <div class="form-group">
                     <label>Tipo de temperatura</label>
                     <br>
-                    <form:radiobutton path = "type" value = "celsius" label = "Celcius" />
+                    <form:radiobutton path = "type" value = "celsius" label = "Celcius" checked="true"/>
                     <form:radiobutton path = "type" value = "fahrenheit" label = "Fahrenheit" />
                     <form:radiobutton path = "type" value = "kelvin" label = "Kelvin" />
                 </div>
