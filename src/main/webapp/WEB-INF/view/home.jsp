@@ -12,7 +12,6 @@
         <title>Weather WEB</title>
         <c:url value="/resources/css" var="cssPath" />
         <link rel="stylesheet" href="${cssPath }/bootstrap.css" />
-        <link rel="stylesheet" href="${cssPath }/bootstrap-theme.min.css" />
 
         <style type="text/css">
             body {
