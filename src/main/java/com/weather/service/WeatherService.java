@@ -12,6 +12,10 @@ public class WeatherService {
     WeatherAPIClient weatherAPIClient;
 
     public Weather getWeather(String city, String temperatureType) {
-        return weatherAPIClient.getHGWeather(city, temperatureType).orElse(null);
+        try {
+            return weatherAPIClient.getHGWeather(city, temperatureType).orElse(null);
+        } catch (RuntimeException ex) {
+            return Weather.builder().description("Cidade não encontrada :(").build();
+        }
     }
 }
