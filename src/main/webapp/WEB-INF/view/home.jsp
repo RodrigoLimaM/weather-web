@@ -22,9 +22,9 @@
                 text-align: center;
             }
             input[type="radio"] {
-                -ms-transform: scale(1.5); /* IE 9 /
-                -webkit-transform: scale(1.5); / Chrome, Safari, Opera */
-                transform: scale(1.5);
+                -ms-transform: scale(1.0);
+                -webkit-transform: scale(1.0);
+                transform: scale(1.0);
             }
         </style>
 
@@ -37,15 +37,15 @@
                 <div class="teste">
                     <h3><label>Tipo de temperatura</label></h3>
 
-                    <div class="form-check form-check-inline" style="margin: 10px 50px 20px 50px;font-size:25px !important">
+                    <div class="form-check form-check-inline" style="margin: 10px 50px 20px 50px;font-size:20px !important">
                       <form:radiobutton class="form-check-input" path="type" value ="celsius" checked="true" />
                       <label class="form-check-label" for="celsius">Celsius</label>
                     </div>
-                    <div class="form-check form-check-inline" style="margin: 10px 50px 20px 50px;font-size:25px !important">
+                    <div class="form-check form-check-inline" style="margin: 10px 50px 20px 50px;font-size:20px !important">
                       <form:radiobutton class="form-check-input" path="type" value ="fahrenheit" />
                       <label class="form-check-label" for="fahrenheit">Fahrenheit</label>
                     </div>
-                    <div class="form-check form-check-inline" style="margin: 10px 50px 20px 50px;font-size:25px !important">
+                    <div class="form-check form-check-inline" style="margin: 10px 50px 20px 50px;font-size:20px !important">
                       <form:radiobutton class="form-check-input" path="type" value ="kelvin" />
                       <label class="form-check-label" for="kelvin">Kelvin</label>
                     </div>
